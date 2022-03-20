@@ -1,13 +1,20 @@
 @font-face {
-    font-family: mmenades_font;
-    src: url(./../fonts/DrukWideBold.ttf);
+    font-family: 'mmenades_font';
+    src: url('./../fonts/DrukWideBold.ttf');
     font-weight: bold;
 }
 
 @font-face {
-    font-family: mmenades_font;
-    src: url(./../fonts/DrukWideMedium.ttf);
+    font-family: 'mmenades_font';
+    src: url('./../fonts/DrukWideMedium.ttf');
     font-weight: medium;
+}
+
+@font-face {
+    font-family: 'helvetical-font';
+    src: url('./../fonts/HelveticaLTStd-Roman.otf')
+    format('opentype');
+    font-weight: normal;
 }
 
 *{
@@ -20,7 +27,6 @@
 
 body {
     cursor: url("./../imagesweb/generales/cosasextra/cursormag.svg"), default;
-    position: relative;
 }
 
 .cursor-mag {
@@ -49,12 +55,6 @@ body {
 
 .makeupeyerepeat{
     width: 100px ;
-    height: auto;
-}
-
-
-.cursor {
-    width: 10 px;
     height: auto;
 }
 
@@ -220,6 +220,7 @@ body {
     flex-direction: row;
     align-items: stretch;
     height: 72vh;
+    bottom: 0px;
 }
 
 .link-2 {
@@ -252,7 +253,7 @@ body {
 }
 
 .link-2 img {
-    bottom: 0;
+    bottom: 0!important;
     left: 0;
 }
 
@@ -285,7 +286,7 @@ body {
 
     /* Responsive de las imagenes del home*/
     .home {
-        height: 100%;
+        height: 100vh;
     }
 
     .link-1 {
@@ -307,8 +308,13 @@ body {
         width: 100%;
         box-sizing: border-box;
         justify-content: center;
-        align-items: center;
         padding: 10% 0px 3% 0px;
+    }
+
+    .link-2 {
+        padding: 10% 0px 0px 0px;
+        justify-content: flex-start;
+        align-items: stretch;
     }
 
     .link-2 img,
@@ -319,4 +325,107 @@ body {
         padding: 0px;
         margin: 0px;
     }
+
+    .link-2 img {
+        position: relative;
+        bottom: 0;
+        left: 0;
+
+        width: 90%;
+        height: 100%;
+    }
+
+    .link-3 img {
+        width: 60%;
+    }
+}
+
+/* Contacto */
+.contact-title {
+    font-size: 3rem;
+}
+.contact-subtitle {
+    font-size: 1.5rem;
+    margin: 20px 0px 20px 4rem;
+}
+.contact-input-title {
+    color: #8d51be;
+    margin: .5rem 0px .3rem 0.5rem;
+    font-family: helvetical-font;
+    font-weight: normal;
+}
+
+.contacto {
+    margin: 0;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.email {
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px blue solid;
+    outline-color: blue;
+    margin-bottom: 5px;
+    width: 100%;
+    max-width: 500px;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+}
+
+.contact-text {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+.contact-textarea {
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px blue solid;
+    outline-color: blue;
+    margin-bottom: 5px;
+    width: 60%;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    position: relative;
+}
+
+.estrella-1 {
+    position: absolute;
+    height: 5rem;
+    width: 5rem;
+    rig
+}
+
+.bg-contacto {
+    z-index: 1;
+    position: absolute;
+    bottom: 0px;
+    rigth: 0;
+
+    width: 100%;
+    height: auto;
+}
+
+.form-container {
+    position: relative;
+    z-index: 5;
+    padding: 10% 10% 0px 10%;
+    width: 100%;
+    height: 100%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
 }
