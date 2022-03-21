@@ -468,7 +468,7 @@ body {
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
-  padding: 5rem 3.5% 0px 3.5%;
+  padding: 5rem 3.5% 5rem 3.5%;
   align-items: flex-end;
   font-size: 0.8rem;
   flex-wrap: wrap;
@@ -526,7 +526,7 @@ body {
   .contact-footer {
     z-index: 5;
     width: 100%;
-    padding: 3rem 15px 0px 15px;
+    padding: 3rem 15px 3rem 15px;
     transition-duration: 0.7s;
   }
 
