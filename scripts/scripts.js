@@ -73,16 +73,16 @@ function cambiaImagenes(child, active_img) {
 
     // Seleccionando la imagen adecuada para que sea la grande
     // Quito la clase del grande al contenedor de la imagen hgrande
-    childs[(active_img + 1) % 2].classList.add("mt1-foto-peque")
-    childs[(active_img + 1) % 2].classList.remove("mt1-foto-grande")
+    childs[(active_img + 1) % 2].classList.add("swap-foto-peque")
+    childs[(active_img + 1) % 2].classList.remove("swap-foto-grande")
     // Cambio las clases de las imagenes que se encuentran dentro del contenedor
     childs[(active_img + 1) % 2].children[0].classList.add("imagen-peque")
     childs[(active_img + 1) % 2].children[0].classList.remove("imagen-grande")
     
 
     // Añado las clases de grande 
-    childs[active_img].classList.add("mt1-foto-grande")
-    childs[active_img].classList.remove("mt1-foto-peque")
+    childs[active_img].classList.add("swap-foto-grande")
+    childs[active_img].classList.remove("swap-foto-peque")
     childs[active_img].children[0].classList.add("imagen-grande")
     childs[active_img].children[0].classList.remove("imagen-peque")
     
