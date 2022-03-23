@@ -89,11 +89,11 @@ function cambiaImagenes(child, active_img) {
 }
 
 /**
- * ccionador de los corazones, el cual cambia los corazones de
+ * Accionador de los corazones, el cual cambia los corazones de
  * tamaño asi como cambia la configuracion de la imagen activa 
  * de tal forma que sea grando mientras las demas sean pequeñas.
- * @param {*} a S
- * @param {*} img 
+ * @param {*} a Elemento actual del corazon
+ * @param {*} img ID de la imagen que se tiene que seleccionar, [0,1] 
  */
 function toggleCorazones(a, img) {
     // Cambiamos los botones
@@ -103,3 +103,14 @@ function toggleCorazones(a, img) {
     cambiaImagenes(a, img)
 }
 
+/**
+ * Dada la imagen como elemento, busca el primer corazon que pertenece
+ * al contenedor común e invoca el metodo de toggleCOrazones sobre el
+ * para activar la imagen buscada
+ * @param {*} a Elemento actual de la imagen
+ * @param {*} img ID de la imagen que se tiene que seleccionar, [0,1]
+ */
+function toggleCorazonesF(a, img) {
+    const corazon = a.parentElement.parentNode.parentNode.children[1].children[0]
+    toggleCorazones(corazon, img)
+}
