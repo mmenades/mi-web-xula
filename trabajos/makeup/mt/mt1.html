@@ -9,7 +9,7 @@
     <script src="./../../../scripts/scripts.js"></script>
     <title>Mmenades - Contacto</title>
 </head>
-<body>
+<body onload="cambiaCursor(cursor_seleccionado);">
     <div class="container-main">
         <div class="nav">
             <img onclick="history.back()" src="./../../../imagesweb/generales/cosasextra/coretenrere.svg" alt="<">
@@ -53,17 +53,22 @@
             </div>
         </div>
     </div>
-    <div class="m1">
-        <div class="m1-container">
-            <div class="m1-photos">
-                a
+    <div class="mt1">
+        <div class="mt1-container">
+            <div class="mt1-photos">
+                <div class="mt1-foto-grande">
+                  <img class="imagen-grande" src="./../../../imagesweb/makeup/pabloclose.jpg">
+                </div>
+                <div class="mt1-foto-peque">
+                  <img  class="imagen-peque" src="./../../../imagesweb/makeup/pablo.jpg">
+                </div>
             </div>
-            <div class="m1-corazones">
-                <img class="corazon-1" src="./../../../imagesweb/generales/cosasextra/corazoncito.svg">
-                <img class="corazon-2" src="./../../../imagesweb/generales/cosasextra/corazoncito.svg">
+            <div class="corazones">
+                <img onclick="toggleCorazones(this, 0)" class="active_img" src="./../../../imagesweb/generales/cosasextra/corazoncito.svg">
+                <img onclick="toggleCorazones(this, 1)" class="inactive_img" src="./../../../imagesweb/generales/cosasextra/corazoncito.svg">
             </div>
         </div>
-        <div class="m1-text">
+        <div class="mt1-text">
             <h2>Purity Angel</h2>
             <h3>Maquillaje para fotografía 
                 de estudio</h3>

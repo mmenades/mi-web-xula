@@ -344,6 +344,74 @@ body {
   }
 }
 
+/* Biografia */
+.bg-quiensoy {
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  right: 0px;
+  width: 100%;
+  height: auto;
+  transition-duration: 1.5s;
+}
+.quiensoy-title {
+  font-size: 2.7rem;
+  transition-duration: 0.7s;
+  box-sizing: border-box;
+  padding: 80px 5% 0px 5%;
+}
+.quiensoy-parrafo-1-2 {
+  color: #8d51be;
+  box-sizing: border-box;
+  padding: 5% 30% 5% 5%;
+}
+.quiensoy-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  padding: 0px 5% 0px 5%;
+  width: 100%;
+  height: auto;
+}
+.quiensoy-img,
+.quiensoy-parrafos-3-4 {
+  color: #8d51be;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: auto;
+  background-color: rgb(90, 139, 0);
+}
+.quiensoy-container-img {
+  display: flex;
+  flex-direction: row;
+}
+.quiensoy-img-mano {
+  width: 200px;
+}
+.qs-parrafo-3 {
+  padding: 10px;
+  background-color: aquamarine;
+}
+.qs-parrafo-4 {
+  padding: 10px;
+  background-color: rgb(198, 235, 65);
+}
+.quiensoy-parrafos {
+  flex-direction: column;
+  width: 50%;
+  height: auto;
+  background-color: aquamarine;
+}
+.quiensoy-container-2 {
+  display: flex;
+  flex-direction: row;
+}
+
 /* Contacto */
 .contact-title {
   font-size: 2.7rem;
@@ -899,56 +967,178 @@ body {
 }
 
 /*m1*/
-.m1 {
+.mt1 {
   display: flex;
-  justify-content: stretch;
-  align-items: center;
+  flex-direction: row;
   width: 100%;
   height: auto;
   box-sizing: border-box;
-  padding: 5% 80px 5% 80px;
+  padding: 80px 5% 80px 5%;
 
   background-color: aqua;
 }
+.mt1-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: auto;
 
+  background-color: darkkhaki;
+}
+.mt1-photos {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+}
+.mt1-foto-grande,
+.mt1-foto-peque {
+  display: flex;
+  align-items: flex-end;
+}
+.mt1-foto-grande {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 70%;
+  height: auto;
+  transition-duration: 0.7s;
+}
+.mt1-foto-peque {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 30%;
+  height: auto;
+  box-sizing: border-box;
+  padding: 10px 10px 0px 10px;
+  transition-duration: 0.7s;
+
+  background-color: aquamarine;
+}
+.imagen-grande {
+  display: flex;
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+}
+
+.corazones {
+  display: flex;
+  box-sizing: border-box;
+  padding: 0px 30% 0px 0px;
+  justify-content: center;
+  align-items: center;
+}
+
+.mt1-text {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: auto;
+
+  background-color: rgb(216, 119, 216);
+}
+
+.active_img,
+.inactive_img {
+  height: 16px;
+  margin: 5px;
+}
+.inactive_img {
+  height: 12px;
+  opacity: 50%;
+}
+.imagen-grande,
+.imagen-peque {
+  width: 100%;
+  height: auto;
+  transition-duration: 0.7s;
+}
+
+/**
 .m1-container,
 .m1-text {
   display: flex;
-  justify-content: stretch;
+  justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
 }
 .m1-container {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   position: relative;
-  padding: 10% 5% 0px 5%;
+  width: 70%;
 
   background-color: yellow;
+}
+.m1-text {
+  width: 30%;
 }
 .m1-photos {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   width: 100%;
-  height: 100%;
+  height: auto;
   flex-direction: row;
 
   background-color: aquamarine;
+}
+.m1-photo-grande,
+.m1-photo-peque {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.m1-photo-grande {
+  width: 60%;
+  height: auto;
+  background-color: cadetblue;
+}
+.m1-photo-peque {
+  width: 40%;
+  max-height: 200px;
+  height: auto;
+  background-color: darkgray;
+}
+.imagen-grande {
+  width: fit-content;
 }
 
 .m1-corazones {
   background-color: bisque;
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   width: 100%;
   height: 100%;
-  flex-direction: row;
+  box-sizing: border-box;
+  padding: 0px 40% 0px 0px;
+}
+
+.corazon-1,
+.corazon-2 {
+  height: 16px;
+  margin: 5px;
+}
+
+.corazon-2 {
+  height: 12px;
+  opacity: 50%;
 }
 
 .m1-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   background-color: antiquewhite;
+  width: 30%;
 }
+*/
