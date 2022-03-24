@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../../aacss/styles.css">
+    <link href="./../../../aacss/reset.css" rel="stylesheet">
+    <script src="./../../../scripts/scripts.js"></script>
+    <title>Mmenades - Contacto</title>
+</head>
+<body onload="cambiaCursor(cursor_seleccionado);">
+    <div class="container-main">
+        <div class="nav">
+            <img onclick="history.back()" src="./../../../imagesweb/generales/cosasextra/coretenrere.svg" alt="<">
+            <img onclick="toggleMenu()" src="./../../../imagesweb/generales/cosasextra/mmenades.svg" alt="">
+        </div>
+    </div>
+    <div class="menu" id="menu">
+        <div class="menu-scrollable">
+            <div class="drop-title bold"><img onclick="toggleMenu()" src="./../../../imagesweb/generales/cosasextra/mmenades.png" alt=""></div>
+            <div class="link">
+                <img src="./../../../imagesweb/generales/cosasextra/einicio.svg" alt=">">
+                <div onclick="location.href='./../../../index.html';">INICIO</div>
+            </div>
+            <div class="link">
+                <img src="./../../../imagesweb/generales/cosasextra/econtacto.svg" alt=">">
+                <div onclick="location.href='./../../../contacto/contacto.html';">CONTACTO</div>
+            </div>
+            <div class="link">
+                <img src="./../../../imagesweb/generales/cosasextra/etrabajos.svg" alt=">">
+                <div onclick="location.href='./../../../trabajos/trabajos.html';">TRABAJOS ARTISTICOS</div>
+            </div>
+            <div class="link">
+                <div class="sublink-container">
+                    <div class="sublink" onclick="location.href='./../../../trabajos/makeup/makeup.html';">Makeup</div>
+                    <div class="sublink" onclick="location.href='./../../../trabajos/pintura/pintura.html';">Pintura y Diseño</div>
+                    <div class="sublink" onclick="location.href='./../../../trabajos/fotografia/fotografia.html';">Fotografía</div>
+                </div>
+            </div>
+            <div class="link" onclick="location.href='./../../../biografia/biografia.html';">
+                <img src="./../../../imagesweb/generales/cosasextra/equiensoy.svg" alt=">">
+                <div>¿QUIEN SOY?</div>
+            </div>
+            <div class="cursor-selector">
+                <div class="cursor-circle-1" onclick="cambiaCursor(0)"></div>
+                <div class="cursor-circle-2" onclick="cambiaCursor(1)"></div>
+                <div class="cursor-circle-3" onclick="cambiaCursor(2)"></div>
+            </div>
+            <div class="sublink-down">
+                Puedes encontrarme en <br>
+                TikTok e Instagram como @mmenades
+            </div>
+        </div>
+    </div>
+    <div class="mt1">
+        <div class="swap-container swap-6 ">
+            <div class="swap-fotos">
+                <div class="swap-foto-grande">
+                  <img onclick="toggleCorazonesF(this, 0)" class="imagen-grande" src="./../../../imagesweb/fotografia/wapa.jpg">
+                </div>
+                <div class="swap-foto-peque">
+                  <img onclick="toggleCorazonesF(this, 1)" class="imagen-peque" src="./../../../imagesweb/fotografia/ovensent.jpg">
+                </div>
+            </div>
+            <div class="corazones">
+                <img onclick="toggleCorazones(this, 0)" class="active_img" src="./../../../imagesweb/generales/cosasextra/corazoncito.svg">
+                <img onclick="toggleCorazones(this, 1)" class="inactive_img" src="./../../../imagesweb/generales/cosasextra/corazoncito.svg">
+            </div>
+        </div>
+        <div class="swap-text space-around">
+            <div class="swap-text-up">
+                <h2>Oven Rythm</h2>
+                <h3>Fotografía bajo los neones 
+                del club</h3>
+            </div>
+            <div class="swap-text-down">
+                <h4>Para ver más fotos relacionadas
+                    pincha aquí:</h4>
+                <a href="https://www.instagram.com/p/CWRAEM8LViI/?utm_source=ig_web_copy_link">https://www.instagram.com/p/CWRAEM8LViI/?utm_source=ig_web_copy_link</a>    
+            </div>
+        </div>
+
+        <img class="bg-m-1" src="./../../../imagesweb/generales/Gfoto/fotoal20.svg">
+    </div>
+</body>
+</html>

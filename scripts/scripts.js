@@ -114,3 +114,7 @@ function toggleCorazonesF(a, img) {
     const corazon = a.parentElement.parentNode.parentNode.children[1].children[0]
     toggleCorazones(corazon, img)
 }
+
+function rellenarCorazonDeAmor(corazon){
+
+}
