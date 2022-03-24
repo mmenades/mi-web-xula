@@ -982,6 +982,7 @@ body {
   flex-direction: column;
   width: 60%;
   height: auto;
+  z-index: 10;
 }
 .swap-fotos {
   position: relative;
@@ -991,11 +992,13 @@ body {
   height: auto;
 }
 .swap-foto-grande,
+.swap-foto-grande-1,
 .swap-foto-peque {
   display: flex;
   align-items: flex-end;
 }
-.swap-foto-grande {
+.swap-foto-grande,
+.swap-foto-grande-1 {
   position: relative;
   display: flex;
   justify-content: center;
@@ -1047,35 +1050,83 @@ body {
   height: auto;
   transition-duration: 0.7s;
 }
-.bg-m1 {
+.bg-m {
   box-sizing: border-box;
   position: fixed;
   top: 15%;
   bottom: 85%;
   right: -15%;
   width: 50%;
-  z-index: 4;
+  z-index: 1;
   transform: rotate(90deg);
   overflow: hidden;
 }
 .swap-text {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 30%;
   height: auto;
 }
-.swap-text h2 {
+.swap-text h2,
+.swap-text-up h2 {
   font-size: 1.5rem;
+  box-sizing: border-box;
   padding: 0px 5px 1.5rem 5px;
 }
-.swap-text h3 {
+.swap-text h3,
+.swap-text-up h3 {
   font-size: 0.9rem;
+  box-sizing: border-box;
   padding: 0px 5px 0px 5px;
+}
+.swap-text-down {
+  padding: 5px 0px 100px 0px;
+}
+.swap-text h4,
+.swap-text-down h4 {
+  font-size: 0.8rem;
+  box-sizing: border-box;
+  padding: 0px 5px 0px 0px;
+}
+.swap-text a,
+.swap-text-down a {
+  font-size: 0.6rem;
+  box-sizing: border-box;
+  padding: 0px 5px 0px 0px;
+  z-index: 10;
+}
+.space-around {
+  justify-content: space-between;
+}
+/* Makeup fotos*/
+.swap-1,
+.swap-2,
+.swap-3,
+.swap-4,
+.swap-5,
+.swap-6 {
+  box-sizing: border-box;
+  width: 70% !important;
 }
 .swap-1 {
   padding: 80px 0px 0px 0px;
-  width: 70%;
 }
+.swap-2 {
+  padding: 0px 10% 0px 0%;
+}
+.swap-3 {
+  padding: 0px 20% 0px 10%;
+}
+.swap-4 {
+  padding: 0px 25% 0px 10%;
+}
+.swap-5 {
+  padding: 0px 20% 0px 0%;
+}
+.swap-6 {
+  padding: 0px 30% 0px 5%;
+}
+
 @media (max-width: 760px) {
   .corazones {
     padding: 10px;
@@ -1091,8 +1142,19 @@ body {
     box-sizing: border-box;
     padding: 5px;
   }
-  .swap-1 {
-    padding: 20px 0px 0px 0px;
+  .swap-text-down {
+    padding: 5px 0px 0px 0px;
+  }
+  .swap-foto-grande-1 {
     width: 100%;
+  }
+
+  .swap-1,
+  .swap-2,
+  .swap-3,
+  .swap-4,
+  .swap-5 {
+    padding: 20px 0px 0px 0px;
+    width: 100% !important;
   }
 }
