@@ -1170,6 +1170,7 @@ body {
 }
 .contenedor-corazones {
   position: relative;
+  z-index: 300;
 }
 
 .corazon-caliente,

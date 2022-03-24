@@ -1,4 +1,31 @@
+const MELODIA = "./../sonidos/mario_bros.mp3"
 cursor_seleccionado = 0
+corazones_completados = 0
+completado = false
+
+/**
+ * Crea el candado para evitar las invocaciones paralelas
+ * del mismo metodo
+ */
+const createLock = () => {
+    let lockStatus = false
+    const release = () => {
+        lockStatus = false
+    }
+    const acuire = () => {
+        if (lockStatus == true)
+            return false
+        lockStatus = true
+        return true
+    }
+    return {
+        lockStatus: lockStatus, 
+        acuire: acuire,
+        release: release,
+    }
+}
+candado = createLock()
+
 /* 
 Sirve para alternar el menu entre visible y no visible,
 añade la etiqueta '.active' al menu o la quita.
@@ -115,6 +142,58 @@ function toggleCorazonesF(a, img) {
     toggleCorazones(corazon, img)
 }
 
-function rellenarCorazonDeAmor(corazon){
-
+/**
+ * Dado el URL de una melodia, la tocará en la web
+ * @param {*} audio La URL del mp3 a sonar 
+ */
+function tocarMelodia(audio){
+    var audio = new Audio(audio);
+    audio.play();   
+}
+/**
+ * El metodo hará parpadear los corazones correspondientes
+ * al id "corazoncitos" 3 veces y después les quitará la clase del
+ * CSS "corazon-enamorado" a cada uno, de esta forma los 
+ * reseteará a su estado inicial
+ */
+function parpadeoCorazones(){
+    const corazoncitos = document.getElementById("corazoncitos");
+    for(let i=0; i <3; i++){
+        setTimeout(()=> {
+            for(let j=0; j<corazoncitos.children.length; j++){
+                // Ejecuto un parpadeo
+                const corazon = corazoncitos.children[j]
+                corazon.children[0].classList.remove("corazon-enamorado")
+                setTimeout(()=> {
+                    corazon.children[0].classList.add("corazon-enamorado")
+                }, 300)
+            }
+        },(500+ i*600))
+    }
+}
+function rellenarCorazonDeAmor(items, posicion){
+    const corazon = items.children[0]
+    if(![...corazon.classList].includes("corazon-enamorado")) {
+        corazon.classList.add("corazon-enamorado")
+        corazones_completados += posicion
+    }
+    // Resetear cuando los corazones sean completados
+    if(corazones_completados >= 28){
+        if(candado.acuire()) {
+            corazones_completados = 0
+            tocarMelodia(MELODIA)
+            parpadeoCorazones()
+            setTimeout(()=> {
+                const corazoncitos = document.getElementById("corazoncitos");
+                for(let j=0; j<corazoncitos.children.length; j++){
+                    // Ejecuto un parpadeo
+                    const corazon = corazoncitos.children[j]
+                    corazon.children[0].classList.remove("corazon-enamorado")
+                }
+                setTimeout(()=> {
+                    candado.release() 
+                },200)
+            },2400)
+        }
+    }
 }
