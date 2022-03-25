@@ -96,7 +96,7 @@ body {
   max-width: 450px;
   right: 0%;
   top: 0px;
-  z-index: 999;
+  z-index: 9999;
   height: auto;
   max-height: 100%;
   overflow-y: auto;
