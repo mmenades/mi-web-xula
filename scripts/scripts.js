@@ -164,7 +164,6 @@ function toggleCorazonesF(a, img) {
  */
 function tocarMelodia(audio){
     var audio = new Audio(audio);
-    audio.muted = false
     audio.play();
 }
 /**
