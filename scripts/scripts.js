@@ -1,4 +1,4 @@
-const MELODIA = "./../sonidos/mario_bros.mp3"
+const MELODIA = "./../../../sonidos/mario_bros_tuberia.mp3"
 cursor_seleccionado = 0
 corazones_completados = 0
 completado = false
@@ -54,12 +54,28 @@ function cambiaCursor(color) {
     if(color == 0){
         cursor_seleccionado = 0
         cursor.classList.add('cursor-mag')
+        localStorage.setItem('cursor', 0)
     }else if(color == 1){
         cursor_seleccionado = 1
         cursor.classList.add('cursor-azul')
+        localStorage.setItem('cursor',1)
     }else{
         cursor_seleccionado = 2
         cursor.classList.add('cursor-verde')
+        localStorage.setItem('cursor', 2)
+    }
+}
+/**
+ * Rescata el valor del cursor seleccionado en caso de 
+ * existirlo en el local storage, en caso contrario, 
+ * selecciona el cursor por defecto
+ */
+function seleccionaCursor(){
+    const cursor = localStorage.getItem('cursor')
+    if(cursor){
+        cambiaCursor(cursor)
+    }else{
+        cambiaCursor(0)
     }
 }
 
@@ -148,7 +164,8 @@ function toggleCorazonesF(a, img) {
  */
 function tocarMelodia(audio){
     var audio = new Audio(audio);
-    audio.play();   
+    audio.muted = false
+    audio.play();
 }
 /**
  * El metodo hará parpadear los corazones correspondientes
@@ -158,7 +175,7 @@ function tocarMelodia(audio){
  */
 function parpadeoCorazones(){
     const corazoncitos = document.getElementById("corazoncitos");
-    for(let i=0; i <3; i++){
+    for(let i=0; i <2; i++){
         setTimeout(()=> {
             for(let j=0; j<corazoncitos.children.length; j++){
                 // Ejecuto un parpadeo
@@ -166,9 +183,9 @@ function parpadeoCorazones(){
                 corazon.children[0].classList.remove("corazon-enamorado")
                 setTimeout(()=> {
                     corazon.children[0].classList.add("corazon-enamorado")
-                }, 300)
+                }, 200)
             }
-        },(500+ i*600))
+        },(10+ i*400))
     }
 }
 function rellenarCorazonDeAmor(items, posicion){
@@ -177,12 +194,13 @@ function rellenarCorazonDeAmor(items, posicion){
         corazon.classList.add("corazon-enamorado")
         corazones_completados += posicion
     }
+
     // Resetear cuando los corazones sean completados
     if(corazones_completados >= 28){
         if(candado.acuire()) {
             corazones_completados = 0
-            tocarMelodia(MELODIA)
             parpadeoCorazones()
+            tocarMelodia("./../../../sonidos/mario_bros_tuberia.wav")
             setTimeout(()=> {
                 const corazoncitos = document.getElementById("corazoncitos");
                 for(let j=0; j<corazoncitos.children.length; j++){
@@ -192,8 +210,12 @@ function rellenarCorazonDeAmor(items, posicion){
                 }
                 setTimeout(()=> {
                     candado.release() 
-                },200)
-            },2400)
+                },500)
+            },850)
         }
     }
 }
+window.onload = function(){ 
+    // Codigo ejecutado siempre que se cargue una ventana
+    seleccionaCursor()
+ }

@@ -72,6 +72,7 @@ body {
   align-items: center;
   height: 60px;
   margin: 0px 3% 0px 3%;
+  z-index: 9999;
 }
 
 .nav {
@@ -1178,18 +1179,18 @@ body {
   height: 30px;
   width: 30px;
   opacity: 0;
-  transition-duration: 0.7s;
+  transition-duration: 0.3s;
 }
 .corazon-frio {
   position: absolute;
   left: 0px;
   top: 0px;
   opacity: 1;
-  transition-duration: 0.7s;
+  transition-duration: 0.3s;
 }
 .corazon-enamorado {
   opacity: 1 !important;
-  transition-duration: 0.7s;
+  transition-duration: 0.3s;
 }
 
 @media (max-width: 760px) {
