@@ -347,7 +347,6 @@ body {
 
 /* Biografia */
 .bg-quiensoy {
-<<<<<<< HEAD
   position: absolute;
   z-index: 0;
   top: -8%;
@@ -363,15 +362,7 @@ body {
   top: 15%;
   right: 0px;
   left: 20%;
-=======
-  position: fixed;
-  z-index: 1;
-  top: 0px;
-  right: 0px;
->>>>>>> ecdbf66fc17a8ed8e29b7b1545cf76220541cfa9
-  width: 100%;
-  height: auto;
-  transition-duration: 1.5s;
+
 }
 .quiensoy-title {
   font-size: 2.7rem;
@@ -406,11 +397,8 @@ body {
   background-color: rgb(90, 139, 0);
 }
 .quiensoy-container-img {
-<<<<<<< HEAD
   background-color: #ff00ff;
   padding: 60px 0 30% 0;
-=======
->>>>>>> ecdbf66fc17a8ed8e29b7b1545cf76220541cfa9
   display: flex;
   flex-direction: row;
 }
@@ -1202,30 +1190,18 @@ body {
   height: 30px;
   width: 30px;
   opacity: 0;
-<<<<<<< HEAD
-  transition-duration: 0.7s;
-=======
   transition-duration: 0.3s;
->>>>>>> ecdbf66fc17a8ed8e29b7b1545cf76220541cfa9
 }
 .corazon-frio {
   position: absolute;
   left: 0px;
   top: 0px;
   opacity: 1;
-<<<<<<< HEAD
-  transition-duration: 0.7s;
-}
-.corazon-enamorado {
-  opacity: 1 !important;
-  transition-duration: 0.7s;
-=======
   transition-duration: 0.3s;
 }
 .corazon-enamorado {
   opacity: 1 !important;
   transition-duration: 0.3s;
->>>>>>> ecdbf66fc17a8ed8e29b7b1545cf76220541cfa9
 }
 
 @media (max-width: 760px) {
