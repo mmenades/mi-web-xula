@@ -1,4 +1,3 @@
-const MELODIA = "./../../../sonidos/mario_bros_tuberia.mp3"
 cursor_seleccionado = 0
 corazones_completados = 0
 completado = false
