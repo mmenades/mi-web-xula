@@ -1,7 +1,7 @@
 cursor_seleccionado = 0
 corazones_completados = 0
 completado = false
-faviconURL = "/imagesweb/generales/cosasextra/easterfill.svg"
+faviconURL = "/mi-web-xula/imagesweb/generales/cosasextra/easterfill.svg"
 
 /**
  * Dada la URL de la imagen del favicon desde la carpeta base, 
