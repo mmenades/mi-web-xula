@@ -236,4 +236,11 @@ window.onload = function(){
     // Codigo ejecutado siempre que se cargue una ventana
     seleccionaCursor()
     setFavicon(faviconURL)
+
+
+    var host = window.location.host;
+    var path = window.location.pathname
+    console.log("Host:", host)
+    console.log("Path:", path)
+    console.log("Origin:", window.location.origin)
 }
