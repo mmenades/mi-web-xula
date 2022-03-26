@@ -1,6 +1,24 @@
 cursor_seleccionado = 0
 corazones_completados = 0
 completado = false
+faviconURL = "/imagesweb/generales/cosasextra/easterfill.svg"
+
+/**
+ * Dada la URL de la imagen del favicon desde la carpeta base, 
+ * crea el elemento del link y lo agrega al head.
+ * @param {*} imgURL URL de la imagen a poner como favicon
+ */
+function setFavicon(imgURL){
+    let base_url = window.location.origin;
+    const url = base_url + imgURL
+    let head = document.querySelector('head');
+    // <link></link>
+    let faviconLink = document.createElement('link');
+    // <link rel="shortcut icon" href=<imgURL>></link>
+    faviconLink.setAttribute('rel','shortcut icon');
+    faviconLink.setAttribute('href',url);
+    head.appendChild(faviconLink);
+}
 
 /**
  * Crea el candado para evitar las invocaciones paralelas
@@ -217,4 +235,5 @@ function rellenarCorazonDeAmor(items, posicion){
 window.onload = function(){ 
     // Codigo ejecutado siempre que se cargue una ventana
     seleccionaCursor()
+    setFavicon(faviconURL)
 }
