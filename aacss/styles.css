@@ -355,6 +355,14 @@ body {
   height: auto;
   transition-duration: 1.5s;
 }
+.quiensoy-img-mano {
+  background-color: #8d51be;
+  position: relative;
+  z-index: 1;
+  top: 15%;
+  right: 0px;
+  left: 20%;
+}
 .quiensoy-title {
   font-size: 2.7rem;
   transition-duration: 0.7s;
@@ -388,6 +396,8 @@ body {
   background-color: rgb(90, 139, 0);
 }
 .quiensoy-container-img {
+  background-color: #ff00ff;
+  padding: 60px 0 30% 0;
   display: flex;
   flex-direction: row;
 }
