@@ -161,9 +161,10 @@ function toggleCorazonesF(a, img) {
  * Dado el URL de una melodia, la tocará en la web
  * @param {*} audio La URL del mp3 a sonar 
  */
-function tocarMelodia(audio){
-    var audio = new Audio(audio);
-    audio.play();
+function tocarMelodia(melodia){
+    var audio = new Audio(melodia)
+    audio.volume = 0.2
+    audio.play()
 }
 /**
  * El metodo hará parpadear los corazones correspondientes
@@ -216,4 +217,4 @@ function rellenarCorazonDeAmor(items, posicion){
 window.onload = function(){ 
     // Codigo ejecutado siempre que se cargue una ventana
     seleccionaCursor()
- }
+}

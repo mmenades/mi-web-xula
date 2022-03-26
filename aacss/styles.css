@@ -271,7 +271,7 @@ body {
   align-items: center;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 1024px) {
   .menu {
     max-width: 100%;
     height: auto;
@@ -349,9 +349,9 @@ body {
 .bg-quiensoy {
   position: fixed;
   z-index: 1;
-  top: 0px;
+  top: -8%;
   right: 0px;
-  width: 100%;
+  width: 115%;
   height: auto;
   transition-duration: 1.5s;
 }
@@ -562,13 +562,13 @@ body {
     transition-duration: 1.5s;
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .contacto {
     padding: 100px 20% 0px 7%;
     transition-duration: 0.7s;
   }
 }
-@media (max-width: 760px) {
+@media (max-width: 1024px) {
   .contacto {
     box-sizing: border-box;
     padding: 80px 15px 0px 15px;
@@ -918,7 +918,7 @@ body {
   overflow: hidden;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 1024px) {
   .makeup-container,
   .pintura-container,
   .fotografia-container {
@@ -1193,7 +1193,7 @@ body {
   transition-duration: 0.3s;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 1024px) {
   .corazones {
     box-sizing: border-box;
     padding: 10px;
