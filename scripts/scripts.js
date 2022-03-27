@@ -1,7 +1,12 @@
+menu_active = false
 cursor_seleccionado = 0
 corazones_completados = 0
 completado = false
 faviconURL = "/mi-web-xula/imagesweb/generales/cosasextra/easterfill.svg"
+menu_class = ["menu", "menu-scrollable", "drop-title", "link",
+            "sublink-container", "sublink", "cursor-selector",
+            "cursor-circle-1", "cursor-circle-2", "cursor-circle-3",
+            "sublink-down"]
 
 /**
  * Dada la URL de la imagen del favicon desde la carpeta base, 
@@ -52,8 +57,29 @@ function toggleMenu() {
 
     if([...menu.classList].includes("active")){
         menu.classList.remove("active")
+        menu_active = false
     }else{
         menu.classList.add("active")
+        menu_active = true
+    }
+}
+
+/**
+ * Comprueba si se esta haciendo el click fuera del menu y, si este
+ * al darse dicho caso, este está activo, se cerrará el menu.
+ * @param {*} event Evento generado por el listener del click 
+ */
+function closeMenuOnClick(event) {
+    const toggleButton = document.getElementsByClassName("container-main").item(0).children[0].children[1]
+    const eventClass = [...event.target.classList][0]
+    let menuContainer = document.getElementsByClassName("menu")[0]
+       
+    if(!menu_class.includes(eventClass) && 
+        !menuContainer.contains(event.target) && 
+        !toggleButton.contains(event.target) && 
+        menu_active){
+        // Clique fuera del menu
+        toggleMenu()
     }
 }
 
@@ -232,8 +258,13 @@ function rellenarCorazonDeAmor(items, posicion){
         }
     }
 }
+
 window.onload = function(){ 
     // Codigo ejecutado siempre que se cargue una ventana
     seleccionaCursor()
     setFavicon(faviconURL)
+}
+
+window.onclick = function(event){
+    closeMenuOnClick(event)
 }
