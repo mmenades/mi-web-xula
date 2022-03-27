@@ -271,9 +271,7 @@ body {
   align-items: center;
 }
 
-
 @media (max-width: 480px) {
-
   .menu {
     max-width: 100%;
     height: auto;
@@ -345,85 +343,6 @@ body {
   .link-3 img {
     width: 60%;
   }
-}
-
-/* Biografia */
-.bg-quiensoy {
-  position: fixed;
-  z-index: 1;
-  top: -8%;
-  right: 0px;
-  width: 115%;
-  height: auto;
-  transition-duration: 1.5s;
-}
-.quiensoy-img-mano {
-  background-color: #8d51be;
-  position: relative;
-  z-index: 1;
-
-  width: 125%;
-  height: auto;
-
-}
-.quiensoy-title {
-  font-size: 2.7rem;
-  transition-duration: 0.7s;
-  box-sizing: border-box;
-  padding: 80px 5% 0px 5%;
-}
-.quiensoy-parrafo-1-2 {
-  color: #8d51be;
-  box-sizing: border-box;
-  padding: 5% 30% 5% 5%;
-}
-.quiensoy-container {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  box-sizing: border-box;
-  padding: 0px 5% 0px 5%;
-  width: 100%;
-  height: auto;
-}
-.quiensoy-img,
-.quiensoy-parrafos-3-4 {
-  color: #8d51be;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  height: auto;
-  background-color: rgb(90, 139, 0);
-}
-.quiensoy-container-img {
-  background-color: #ff00ff;
-  padding: 60px 0 30% 0;
-  display: flex;
-  flex-direction: row;
-}
-.quiensoy-img-mano {
-  width: 200px;
-}
-.qs-parrafo-3 {
-  padding: 10px;
-  background-color: aquamarine;
-}
-.qs-parrafo-4 {
-  padding: 10px;
-  background-color: rgb(198, 235, 65);
-}
-.quiensoy-parrafos {
-  flex-direction: column;
-  width: 50%;
-  height: auto;
-  background-color: aquamarine;
-}
-.quiensoy-container-2 {
-  display: flex;
-  flex-direction: row;
 }
 
 /* Contacto */
@@ -1251,5 +1170,156 @@ body {
     box-sizing: border-box;
     padding: 20px 0px 0px 0px;
     width: 100% !important;
+  }
+}
+
+/* Biografia */
+.bg-quiensoy {
+  position: fixed;
+  z-index: 1;
+  top: -8%;
+  right: 0px;
+  width: 115%;
+  height: auto;
+  transition-duration: 1.5s;
+}
+.quiensoy-title {
+  font-size: 2.7rem;
+  transition-duration: 0.7s;
+  box-sizing: border-box;
+  padding: 80px 5% 0px 5%;
+}
+.quiensoy-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  padding: 0px 5% 0px 5%;
+  width: 100%;
+  height: auto;
+}
+.quiensoy-parrafo-1-2 {
+  color: #8d51be;
+  box-sizing: border-box;
+  padding: 80px 40% 5% 0px;
+  transition-duration: 0.7s;
+}
+.quiensoy-img,
+.quiensoy-parrafos-3-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40%;
+  box-sizing: border-box;
+  padding: 10% 5% 5% 0px;
+  color: #8d51be;
+}
+.qs-parrafo-3,
+.qs-parrafo-4,
+.qs-parrafo-5 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: right;
+  box-sizing: border-box;
+  padding: 5% 0px 0px 20%;
+  color: #8d51be;
+}
+.qs-parrafo-5 {
+  text-align: right;
+  padding: 0px 20% 0px 0px;
+}
+.quiensoy-img-mano-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  box-sizing: border-box;
+  padding: 10% 15% 0px 10%;
+  z-index: 10;
+}
+.quiensoy-container-img {
+  display: flex;
+  flex-direction: row;
+}
+.quiensoy-img-mano {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.quiensoy-container-2 {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  height: auto;
+}
+.qs-container2-img,
+.qs-parrafo-6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: auto;
+}
+.qs-container2-img {
+  box-sizing: border-box;
+  padding: 1% 5% 5% 3%;
+  transition-duration: 0.7s;
+}
+.quiensoy-img-botas {
+  width: 100%;
+  height: auto;
+}
+.qs-parrafo-6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  box-sizing: border-box;
+  padding: 0px 0px 0px 7%;
+  color: #8d51be;
+}
+
+@media (max-width: 1024px) {
+  .quiensoy-parrafo-1-2 {
+    box-sizing: border-box;
+    padding: 80px 0px 5% 0px;
+    transition-duration: 0.7s;
+  }
+  .quiensoy-container-img {
+    flex-direction: column;
+  }
+  .quiensoy-img-mano-container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5% 15% 5% 15%;
+    z-index: 10;
+  }
+  .quiensoy-parrafos-3-4 {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10%;
+  }
+  .qs-parrafo-5 {
+    box-sizing: border-box;
+    padding: 10% 15% 0px 0px;
+    text-align: left;
+    align-items: flex-start;
+  }
+  .quiensoy-container-2 {
+    flex-direction: column;
+    width: 100%;
+  }
+  .qs-container2-img {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10% 10% 5% 10%;
+    transition-duration: 0.7s;
+  }
+  .qs-parrafo-6 {
+    display: flex;
+    text-align: left;
+    padding: 5%;
+    width: 100%;
   }
 }
