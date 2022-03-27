@@ -1,3 +1,4 @@
+mail_to = "mmenades3@gmail.com"
 menu_active = false
 cursor_seleccionado = 0
 corazones_completados = 0
@@ -8,6 +9,27 @@ menu_class = ["menu", "menu-scrollable", "drop-title", "link",
             "cursor-circle-1", "cursor-circle-2", "cursor-circle-3",
             "sublink-down"]
 
+
+/**
+ * 
+ * @param {*} nombre Contenido del input nombre
+ * @param {*} email Contenido del input email
+ * @param {*} propuesta Contenido del input propuesta
+ */
+function enviarMail(nombre, email, propuesta){
+    var subject = "Email desde la web"
+    var body = "Nombre:" + nombre+ ", Email: "+ email + ", Propuesta: "+ propuesta
+    window.location = 'mailto:'+mail_to+'?body='+ encodeURIComponent(body) +'&subject='+ encodeURIComponent(subject);
+}
+/**
+ * Obtiene los datos del formulario 'Contacto' y lo envia al adminisitrador de la web
+ */
+function enviarMailAlAdmin() {
+    const nombre = document.getElementById('nombre').value ||""
+    const email = document.getElementById('mail').value ||""
+    const propuesta = document.getElementById('propuesta').value ||""
+    enviarMail(nombre, email, propuesta)
+}
 /**
  * Dada la URL de la imagen del favicon desde la carpeta base, 
  * crea el elemento del link y lo agrega al head.
