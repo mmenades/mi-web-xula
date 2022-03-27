@@ -271,7 +271,7 @@ body {
   align-items: center;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 480px) {
   .menu {
     max-width: 100%;
     height: auto;
@@ -359,9 +359,8 @@ body {
   background-color: #8d51be;
   position: relative;
   z-index: 1;
-  top: 15%;
-  right: 0px;
-  left: 20%;
+  width: 125%;
+  height: auto;
 
 }
 .quiensoy-title {
@@ -751,7 +750,7 @@ body {
   }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 1024px) {
   .trabajos-links {
     flex-direction: column;
     justify-content: center;
@@ -1204,7 +1203,7 @@ body {
   transition-duration: 0.3s;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 1024px) {
   .corazones {
     box-sizing: border-box;
     padding: 10px;
